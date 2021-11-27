@@ -41,3 +41,4 @@ public class DentistVisitDTO {
         this.visitTime = visitTime;
     }
 }
+
