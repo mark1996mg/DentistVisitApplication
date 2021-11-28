@@ -5,12 +5,12 @@
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-  <form action="#" th:action="@{/appointments/edit/{id}(id=${visit?.id})}" th:object="${dentistVisitDTO}" method="post">
+  <form action="#" th:action="@{/appointments/edit/{id}(id=${dentistVisitDTO?.id})}" th:object="${dentistVisitDTO}" method="post">
     <table>
       <tr>
         <td><p th:text="#{dentist.name}">dentist.name</p></td>
         <td>
-          <input type="text" id="dentistName" name="dentistName" th:value="${visit?.dentistName}" list="dentists"/>
+          <input type="text" id="dentistName" name="dentistName" th:value="${dentistVisitDTO?.dentistName}" list="dentists"/>
           <datalist id="dentists">
             <option th:each="dentist : ${dentists}" th:value="${dentist}"></option>
           </datalist>
@@ -19,8 +19,9 @@
       </tr>
       <tr>
         <td><p th:text="#{visit.date}">visit.date</p></td>
-        <td><input type="datetime-local" id="visitTime" name="visitTime" th:value="${visit?.visitTime}"/></td>
+        <td><input type="datetime-local" id="visitTime" name="visitTime" th:value="${dentistVisitDTO?.visitTime}"/></td>
         <td th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}">date.error</td>
+        <td th:if="${errorMessage}" th:text="${errorMessage}">date.error</td>
       </tr>
       <tr>
         <td>
