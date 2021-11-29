@@ -9,7 +9,9 @@
 /target/classes/com/cgi/dentistapp/DentistAppApplication.class
 /target/classes/com/cgi/dentistapp/WebConfiguration.class
 /target/classes/i18n/messages.properties
-/target/classes/static/css/style.css
+/target/classes/static/css/main.css
+/target/classes/static/css/form.css
+/target/classes/static/css/appointments.css
 /target/classes/static/js/app.js
 /target/classes/templates/appointments.html
 /target/classes/templates/editform.html
