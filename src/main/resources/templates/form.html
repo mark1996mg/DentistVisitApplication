@@ -2,33 +2,34 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Register</title>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/form.css}"/>
 </head>
 <body>
-  <form action="#" th:action="@{/form}" th:object="${dentistVisitDTO}" method="post">
+  <form id="dentist-register-form" action="#" th:action="@{/form}" th:object="${dentistVisitDTO}" method="post">
     <table>
-      <tr>
-        <td><p th:text="#{dentist.name}">dentist.name</p></td>
+      <tr class="form-table-row">
+        <td class="registration-input-label"><p th:text="#{dentist.name}">dentist.name</p></td>
         <td>
-          <input type="text" id="dentistName" name="dentistName" th:value="${dentistVisitDTO?.dentistName}" list="dentists"/>
+          <input class="registration-input" type="text" id="dentistName" name="dentistName" th:value="${dentistVisitDTO?.dentistName}" list="dentists"/>
           <datalist id="dentists">
             <option th:each="dentist : ${dentists}" th:value="${dentist}"></option>
           </datalist>
+          <p class="error-message" th:if="${#fields.hasErrors('dentistName')}" th:errors="*{dentistName}">name.error</p>
         </td>
-        <td th:if="${#fields.hasErrors('dentistName')}" th:errors="*{dentistName}">name.error</td>
       </tr>
-      <tr>
-        <td><p th:text="#{visit.date}">visit.date</p></td>
-        <td><input type="datetime-local" id="visitTime" name="visitTime" th:value="${dentistVisitDTO?.visitTime}"/></td>
-        <td th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}">date.error</td>
-        <td th:if="${errorMessage}" th:text="${errorMessage}">date.error</td>
-      </tr>
-      <tr>
+      <tr class="form-table-row">
+        <td class="registration-input-label"><p th:text="#{visit.date}">visit.date</p></td>
         <td>
-          <button type="submit" th:text="#{register.visit}"></button>
+          <input class="registration-input" type="datetime-local" id="visitTime" name="visitTime" th:value="${dentistVisitDTO?.visitTime}"/>
+          <p class="error-message" th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}">date.error</p>
+          <p class="error-message" th:if="${errorMessage}" th:text="${errorMessage}">date.error</p>
         </td>
       </tr>
     </table>
+    <div id="registration-buttons">
+      <button id="register-button" type="submit" th:text="#{button.register}"></button>
+      <a id="back-button" th:text="#{button.back}" th:href="@{/}"></a>
+    </div>
   </form>
 </body>
 </html>

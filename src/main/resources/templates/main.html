@@ -2,11 +2,12 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Home</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 </head>
 <body>
-  <form action="#" th:action="@{/}" method="post">
-    <a th:text="#{register.visit}" th:href="@{/form}"></a>
-    <a th:text="#{view.appointments}" th:href="@{/appointments}"></a>
-  </form>
+  <div id="main-page-button-div">
+    <a class="main-page-button" th:text="#{button.register}" th:href="@{/form}"></a>
+    <a class="main-page-button" th:text="#{button.appointments}" th:href="@{/appointments}"></a>
+  </div>
 </body>
 </html>

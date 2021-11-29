@@ -1,0 +1,77 @@
+body {
+  background-color: #e3e3e3;
+}
+
+#dentist-register-form {
+  margin: auto;
+  background-color: #fbfbfb;
+  border: 2px solid #7d7d7d;
+  width: 360px;
+  margin-top: 300px;
+  padding: 30px;
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.form-table-row {
+  font: 16px Arial;
+  height: 35px;
+}
+
+.registration-input-label {
+  vertical-align: top;
+  padding-top: 5px;
+  width: 100px;
+}
+
+.registration-input {
+  height: 25px;
+  width: 200px;
+  margin-left: 10px;
+}
+
+.error-message {
+  font: 11px Arial;
+  color: red;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#registration-buttons {
+  float: right;
+  margin: 15px -10px -10px 0px;
+}
+
+#register-button {
+  font: bold 15px Arial;
+  background-color: #1baddb;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100px;
+}
+
+#register-button:hover {
+  background-color: #20bdee;
+  cursor: pointer;
+}
+
+#register-button:active {
+  background-color: #1c98bf;
+}
+
+#back-button {
+  font: bold 15px Arial;
+  background-color: #d13a3a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 35px;
+}
+
+#back-button:hover {
+  background-color: #e24040;
+}
+
+#back-button:active {
+  background-color: #bb3434;
+}

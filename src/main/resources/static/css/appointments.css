@@ -1,0 +1,84 @@
+body {
+  background-color: #e3e3e3;
+}
+
+#appointments-div {
+  border-collapse:collapse;
+  margin: auto;
+  width: 800px;
+  margin-top: 100px;
+  font: 16px Arial;
+
+}
+
+#dentistVisitsTable {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+
+#dentistVisitsTable td, #dentistVisitsTable th {
+  border: 1px solid #5d5d5d;
+  padding: 7px;
+}
+
+#dentistVisitsTable th {
+  background-color: #09b9d7;
+  color: white;
+}
+
+#edit-button, #delete-button {
+  text-align: center;
+  font: bold 16px Arial;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  width: 50px;
+}
+
+#action-row {
+  width: 130px;
+}
+
+#edit-button {
+  background-color: #4acb57
+}
+
+#edit-button:hover {
+  background-color: #50db5e
+}
+
+#edit-button:active {
+  background-color: #43b84f
+}
+
+#delete-button {
+  background-color: #cb4a4a
+}
+
+#delete-button:hover {
+  background-color: #dd5353
+}
+
+#delete-button:active {
+  background-color: #b54444
+}
+
+#back-button {
+  display: inline-block;
+  margin-top: 20px;
+  font: bold 15px Arial;
+  background-color: #d13a3a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 35px;
+}
+
+#back-button:hover {
+  background-color: #e24040;
+}
+
+#back-button:active {
+  background-color: #bb3434;
+}

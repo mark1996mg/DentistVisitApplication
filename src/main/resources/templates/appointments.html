@@ -3,38 +3,26 @@
   <meta charset="UTF-8"/>
   <title>Appointments</title>
   <script type="text/javascript" th:src="@{/js/app.js}"></script>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/appointments.css}"/>
 </head>
 <body>
-  <div>
+  <div id="appointments-div">
     <table id="dentistVisitsTable">
       <tr>
-        <td><p th:text="#{dentist.name}">dentist.name</p></td>
-        <td><p th:text="#{visit.date}">visit.date</p></td>
-        <td><p th:text="#{table.action}">visit.date</p></td>
+        <th><p th:text="#{dentist.name}">dentist.name</p></th>
+        <th><p th:text="#{visit.date}">visit.date</p></th>
+        <th><p th:text="#{table.action}">visit.date</p></th>
       </tr>
       <tr th:each="visit : ${visits}">
-        <td>
-          <p th:text="${visit.dentistName}"></p>
-          <div id="editNameDiv" style="display: none">
-            <input type="text" list="dentists"/>
-            <datalist id="dentists">
-              <option th:each="dentist : ${dentists}" th:value="${dentist}"></option>
-            </datalist>
-          </div>
-        </td>
-        <td>
-          <p th:text="${visit.visitTime}"></p>
-          <div id="editVisitTimeDiv" style="display: none">
-            <input type="datetime-local"/>
-          </div>
-        </td>
-        <td>
-          <a th:text="#{button.edit}" th:href="@{/appointments/edit/{id}(id=${visit.id})}"></a>
-          <a th:text="#{button.delete}" th:href="@{/appointments/delete/{id}(id=${visit.id})}"></a>
+        <td><p th:text="${visit?.dentistName}"></p></td>
+        <td><p th:text="${#temporals.format(visit?.visitTime, 'dd/MM/yyyy HH:mm')}"></p></td>
+        <td id="action-row">
+          <a id="edit-button" th:text="#{button.edit}" th:href="@{/appointments/edit/{id}(id=${visit.id})}"></a>
+          <a id="delete-button" th:text="#{button.delete}" th:href="@{/appointments/delete/{id}(id=${visit.id})}"></a>
         </td>
       </tr>
     </table>
+    <a id="back-button" th:text="#{button.back}" th:href="@{/}"></a>
   </div>
 </body>
 </html>
