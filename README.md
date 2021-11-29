@@ -4,23 +4,23 @@ Java test excercise for CGI
 
 Description of my task
 
-0) Stage 0 -
+0) Stage 0
   * I used IntelliJ Iwith Java 13 in projetc setting and maven
   * Was very straightfoward and didn't take long at all. Initially application didn't run once I imported project to 
   IntelliJ but I managed to fix it quickly by making necessary changed in pom file
   
-1) Stage 1 -
+1) Stage 1
   * Wasn't difficult but I had no knowledge on Thymeleaf so read about topic and looked into application to understand it.
   Took only few hours, because of studying.
   * Main page opens with options to register new appointment or view all registered appointments.
   * Solution for registering an appointment was that once I open register form page loads data from DB to dislay all registered dentist names in input options. If inputs are all
   correct then data is saved to DB
   
-2) Stage 2 -
+2) Stage 2
   * This was very straightfoward and easy, didn't have any difficulties
   * Solution was to load all registered appointments from DB and display them in table
   
-3) Stage 3 -
+3) Stage 3
   * This was the most difficult part and took majority of time, specificly implementing edit. 
   * Didn't have have much difficulties with backend Java solution, only problem where I got little bit stuck was that input data and loaded data from DB was getting 
   lost once I posted something and received error message (input check). 
@@ -34,6 +34,6 @@ Description of my task
   If used tries to register/update an appointment to dentist that already has that specific time booked then error message is displayd telling user that time is already booked
   (unfortunately I didn't have time to implement overlapping time, visit time is booked only at specific time like 01/01/2021/12:00)
   
-5) Stage 4 -
+5) Stage 4
   * Took a little time to implement search but I got the solution idea from https://www.w3schools.com/howto/howto_js_filter_table.asp
   * Solution was to add search bar where user can type dentist name and table rows are filtered to match dentist name that user wants to search
