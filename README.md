@@ -20,7 +20,6 @@ Description of my task
   Didn't have have much difficulties with backend Java solution, only problem where I got little bit stuck was that input data and loaded data from DB was getting 
   lost once I posted something and received error message (input check). 
   So I found a solution that fixed it from stackoverflow: https://stackoverflow.com/questions/15903238/passing-bindingresult-through-redirectionattributes
-  
   I had mostly difficulties with frontend since I mainly have experience with backend and it's been a while since I did something in frontend with html, css, ... etc.
   What took a lot of time was the way I wanted to implement editing since I had some ideas but since I had bit trouble with them and it took too much time i decided to
   implement easiest solution which was to open data to be edited in a different page as a form.
