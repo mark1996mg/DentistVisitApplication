@@ -5,7 +5,7 @@ Java test excercise for CGI
 Description of my task
 
 0) Stage 0
-  * I used IntelliJ Iwith Java 13 in projetc setting and maven
+  * I used IntelliJ with Java 13 in projetc setting and maven
   * Was very straightfoward and didn't take long at all. Initially application didn't run once I imported project to 
   IntelliJ but I managed to fix it quickly by making necessary changed in pom file
   
